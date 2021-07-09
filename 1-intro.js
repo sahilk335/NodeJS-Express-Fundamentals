@@ -6,3 +6,5 @@ if(amount <10){
 }
 
 console.log(`hey its's my first node app !!!`);
+
+
