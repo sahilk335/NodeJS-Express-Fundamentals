@@ -4,8 +4,7 @@
   "description": "",
   "main": "1-intro.js",
   "scripts": {
-    "start": "node 13-npm.js",
-    "dev" : "nodemon 13-npm.js"
+    "start" : "nodemon 13-npm.js"
   },
   "repository": {
     "type": "git",
