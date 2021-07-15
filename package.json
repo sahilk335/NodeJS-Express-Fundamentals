@@ -4,7 +4,7 @@
   "description": "",
   "main": "1-intro.js",
   "scripts": {
-    "start" : "nodemon 13-npm.js"
+    "start" : "nodemon app.js"
   },
   "repository": {
     "type": "git",
