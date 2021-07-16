@@ -1,11 +1,21 @@
-const http = require('http');
+const express = require('express');
 
-const server = http.createServer((req, res) => {
-    console.log(req);
-    res.writeHead(200, { 'content-type': 'text/html' });
-    res.write('<H1> Head</H1>')
-    res.end();
+const { products } = require('./data')
+
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('<h1>Home Page</h1><a href = "/api/products">products</a>');
+});
+
+app.get('/api/products/:productId', (req, res) => {
+
+    const { productId } = req.params;
+    const singleProduct = products.find((product) => product.id === Number(productId));
+    res.json(singleProduct);
 });
 
 
-server.listen(5000);
+app.listen(5000, () => {
+    console.log('Server is listening on port 5000');
+});
